@@ -6,35 +6,49 @@ import { Link } from "react-router-dom";
 interface INavigationProps {
   config: any;
   activeClassName: string;
-  containerClassName: string;
+  className: string;
+  currentPath: string;
+  withChildrenClassName?: string;
 }
 
 const noop = () => {};
 
 export const Navigation: React.SFC<INavigationProps> = ({
   config,
-  containerClassName,
-  activeClassName
+  currentPath,
+  className,
+  activeClassName,
+  withChildrenClassName = ""
 }: any) => {
   return (
-    <Tree config={config}>
+    <Tree activeId={currentPath} config={config}>
       {({ api: { getTree, toggleNode } }) => {
         const renderTree = (tree: any) =>
           tree.map(({ id: path, active, title, children }: any) => {
-            const handleClick = children ? toggleNode : noop;
-            const itemClassName = classNames({ [activeClassName]: active });
+            const withChildren = Boolean(children);
+            const handleClick = withChildren ? toggleNode : noop;
+            const itemClassName = classNames({
+              [activeClassName]: active,
+              [withChildrenClassName]: withChildren
+            });
 
             return (
-              <li key={path} onClick={handleClick} className={itemClassName}>
+              <li
+                key={path}
+                id={path}
+                onClick={handleClick}
+                className={itemClassName}
+              >
                 <Link to={path}>{title}</Link>
+
                 {children ? <ul>{renderTree(children)}</ul> : null}
               </li>
             );
           });
 
         return (
-          <nav>
-            <ul className={containerClassName}>{renderTree(getTree())}</ul>
+          <nav className={className}>
+            <ul>{renderTree(getTree())}</ul>
           </nav>
         );
       }}
