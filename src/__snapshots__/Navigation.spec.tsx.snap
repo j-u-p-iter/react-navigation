@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation renders correctly 1`] = `
+<nav>
+  <ul
+    class="container-class-name"
+  >
+    <li
+      class=""
+    >
+      <a
+        href="/1"
+      >
+        Title 1
+      </a>
+      <ul>
+        <li
+          class=""
+        >
+          <a
+            href="/2"
+          >
+            Title 2
+          </a>
+          <ul>
+            <li
+              class=""
+            >
+              <a
+                href="/3"
+              >
+                Title 3
+              </a>
+              <ul>
+                <li
+                  class=""
+                >
+                  <a
+                    href="/4"
+                  >
+                    Title 4
+                  </a>
+                  <ul>
+                    <li
+                      class=""
+                    >
+                      <a
+                        href="/5"
+                      >
+                        Title 5
+                      </a>
+                    </li>
+                    <li
+                      class=""
+                    >
+                      <a
+                        href="/6"
+                      >
+                        Title 6
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li
+      class=""
+    >
+      <a
+        href="/7"
+      >
+        Title 7
+      </a>
+      <ul>
+        <li
+          class=""
+        >
+          <a
+            href="/8"
+          >
+            Title 8
+          </a>
+          <ul>
+            <li
+              class=""
+            >
+              <a
+                href="/9"
+              >
+                Title 9
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+`;

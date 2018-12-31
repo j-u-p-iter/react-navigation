@@ -1,0 +1,45 @@
+{
+  "name": "@j.u.p.iter/react-navigation",
+  "version": "0.0.1",
+  "description": "Reusable navigation component",
+  "keywords": [
+    "react",
+    "navigation"
+  ],
+  "main": "dist/lib/react-navigation.cjs.js",
+  "module": "dist/lib/react-navigation.esm.js",
+  "umd:main": "dist/lib/react-navigation.umd.min.js",
+  "source": "dist/lib/react-navigation.js",
+  "typings": "dist/types",
+  "repository": "git@github.com:j-u-p-iter/react-navigation.git",
+  "author": "Leontyev Kirill (j.u.p.iter) <pn79122821224@gmail.com> (http://j-u-p-iter.pro/)",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "commit": "jupiter-scripts precommit --allowJs",
+    "build": "jupiter-scripts build --bundle",
+    "start": "yarn run build --watch",
+    "lint": "jupiter-scripts lint --format codeFrame",
+    "lint:fix": "yarn run lint --fix",
+    "test": "jupiter-scripts test"
+  },
+  "devDependencies": {
+    "@j.u.p.iter/jupiter-scripts": "^1.6.0",
+    "@types/react": "^16.7.18",
+    "@types/react-router-dom": "^4.3.1",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-router-dom": "^4.3.1",
+    "react-testing-library": "^5.4.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.4.2"
+  },
+  "dependencies": {
+    "@j.u.p.iter/react-tree": "1.0.1",
+    "@types/classnames": "^2.2.6",
+    "classnames": "^2.2.6"
+  }
+}
