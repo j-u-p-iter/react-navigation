@@ -35,7 +35,8 @@
     "react-testing-library": "^5.4.2"
   },
   "peerDependencies": {
-    "react": ">=16.4.2"
+    "react": ">=16.4.2",
+    "react-router-dom": ">=4.3.1"
   },
   "dependencies": {
     "@j.u.p.iter/react-tree": "1.0.1",
