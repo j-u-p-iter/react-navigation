@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 interface INavigationProps {
   config: any;
-  activeClassName: string;
-  className: string;
   currentPath: string;
+  className?: string;
+  activeClassName?: string;
   withChildrenClassName?: string;
 }
 
@@ -36,7 +36,11 @@ export const Navigation: React.SFC<INavigationProps> = ({
               <li
                 key={path}
                 id={path}
-                onClick={handleClick}
+                onClick={event => {
+                  event.stopPropagation();
+
+                  handleClick(event);
+                }}
                 className={itemClassName}
               >
                 <Link to={path}>{title}</Link>

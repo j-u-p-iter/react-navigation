@@ -36,7 +36,7 @@ exports[`Navigation doesn't toggle items without children 1`] = `
               </a>
               <ul>
                 <li
-                  class="with-children-class-name"
+                  class="active-class-name with-children-class-name"
                   id="/path/4"
                 >
                   <a
